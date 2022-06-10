@@ -45,6 +45,6 @@ public class EnemySpawner : MonoBehaviour
         GameObject enemyPrefab = currentWave.GetEnemyPrefab(index);
         Transform startWavePoint = currentWave.GetStartingWavePoint();
 
-        Instantiate(enemyPrefab, startWavePoint.position, Quaternion.identity, transform);
+        Instantiate(enemyPrefab, startWavePoint.position, Quaternion.Euler(0, 0, 180), transform);
     }
 }
